@@ -78,12 +78,18 @@ El objetivo es dar a conocer al equipo de delegados, informar sobre FETICO y cap
 
 ## Fotos de los delegados
 
-**PENDIENTE — el usuario proporcionará las fotos con sus nombres de archivo.**
+Las fotos están en `/assets/fotos/`. Los miembros con foto real ya tienen `<img>` en el HTML; los que aún no tienen foto mantienen el SVG placeholder.
 
-Las fotos irán en la sección `#equipo` dentro de `.member-photo`. Actualmente hay SVGs placeholder generados con ilustraciones. Cuando se entreguen las fotos:
-- Colocar en carpeta `/assets/fotos/`
-- Formato recomendado: JPG o WebP, ratio 3:4 (portrait)
-- Reemplazar el SVG placeholder por `<img src="assets/fotos/NOMBRE.jpg" alt="Nombre delegado" style="width:100%;height:100%;object-fit:cover;">`
+| Archivo | Estado |
+|---------|--------|
+| pili-garcia.png | ✅ integrada |
+| cristian-romano.png | ✅ integrada |
+| josemi-caicedo.png | ✅ integrada |
+| carles-rins.png | ✅ integrada |
+| marc-gonzalez.png | ✅ integrada |
+| josef-villagrasa.png | ✅ integrada |
+| isa-vasquez.png | ✅ integrada |
+| alain-garvi.jpg | ⚠️ pendiente |
 
 ---
 
