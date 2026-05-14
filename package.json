@@ -1,0 +1,9 @@
+{
+  "name": "fetico-bcn1",
+  "version": "1.0.0",
+  "description": "Landing page electoral FETICO BCN1 - Amazon El Prat de Llobregat",
+  "scripts": {
+    "dev": "npx live-server --port=3000 --open=index.html",
+    "start": "npx live-server --port=3000 --open=index.html"
+  }
+}
