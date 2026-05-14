@@ -143,6 +143,16 @@
       radial-gradient(ellipse 100% 100% at 50% 100%, rgba(0,50,20,0.4) 0%, transparent 60%);
   }
 
+  .hero-watermark {
+    position: absolute;
+    inset: 0;
+    background: url('assets/logo-calavera.png') center center / 600px auto no-repeat;
+    opacity: 0.025;
+    filter: invert(1) sepia(1) saturate(6) hue-rotate(88deg);
+    pointer-events: none;
+    z-index: 1;
+  }
+
   .hero-grid {
     position: absolute;
     inset: 0;
@@ -1105,25 +1115,7 @@
 <!-- NAV -->
 <nav>
   <div class="nav-brand">
-    <!-- Inline skull mini logo -->
-    <svg class="nav-logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="50" cy="50" r="48" stroke="#00e64d" stroke-width="2" opacity="0.3"/>
-      <circle cx="50" cy="50" r="38" fill="#111"/>
-      <!-- skull shape -->
-      <ellipse cx="50" cy="42" rx="18" ry="16" fill="#00e64d" opacity="0.9"/>
-      <ellipse cx="50" cy="52" rx="13" ry="10" fill="#00e64d" opacity="0.9"/>
-      <!-- eyes -->
-      <ellipse cx="43" cy="41" rx="5" ry="5.5" fill="#050505"/>
-      <ellipse cx="57" cy="41" rx="5" ry="5.5" fill="#050505"/>
-      <!-- teeth -->
-      <rect x="40" y="57" width="4" height="6" rx="1" fill="#050505"/>
-      <rect x="46" y="57" width="4" height="7" rx="1" fill="#050505"/>
-      <rect x="52" y="57" width="4" height="6" rx="1" fill="#050505"/>
-      <!-- nose -->
-      <path d="M48 49 L50 52 L52 49" stroke="#050505" stroke-width="1.5" fill="none"/>
-      <!-- BCN1 text inside -->
-      <text x="50" y="80" text-anchor="middle" font-family="'Black Ops One', cursive" font-size="9" fill="#00e64d" letter-spacing="1">BCN1</text>
-    </svg>
+    <img src="assets/logo-calavera.png" alt="FETICO BCN1" class="nav-logo" style="filter: invert(1) sepia(1) saturate(5) hue-rotate(90deg) brightness(1.1);">
     <div>
       <div class="nav-title">FETICO <span>AMAZON BCN1</span></div>
     </div>
@@ -1140,64 +1132,12 @@
 <!-- HERO -->
 <section id="hero" style="max-width:100%; padding-top:80px;">
   <div class="hero-bg"></div>
+  <div class="hero-watermark"></div>
   <div class="hero-grid parallax-layer" data-speed="0.2"></div>
   <div class="hero-lines"></div>
 
   <div class="skull-container parallax-layer" data-speed="0.1">
-    <!-- Full skull SVG inspired by the BCN1 logo -->
-    <svg class="skull-svg" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Outer rays -->
-      <g opacity="0.4" stroke="#00e64d" stroke-width="1.5">
-        <line x1="150" y1="20" x2="150" y2="0"/>
-        <line x1="150" y1="20" x2="170" y2="2" transform="rotate(15,150,150)"/>
-        <line x1="150" y1="20" x2="170" y2="2" transform="rotate(-15,150,150)"/>
-        <line x1="150" y1="20" x2="170" y2="2" transform="rotate(30,150,150)"/>
-        <line x1="150" y1="20" x2="170" y2="2" transform="rotate(-30,150,150)"/>
-        <line x1="150" y1="20" x2="170" y2="2" transform="rotate(50,150,150)"/>
-        <line x1="150" y1="20" x2="170" y2="2" transform="rotate(-50,150,150)"/>
-        <line x1="150" y1="20" x2="170" y2="2" transform="rotate(70,150,150)"/>
-        <line x1="150" y1="20" x2="170" y2="2" transform="rotate(-70,150,150)"/>
-        <line x1="150" y1="20" x2="170" y2="2" transform="rotate(100,150,150)"/>
-        <line x1="150" y1="20" x2="170" y2="2" transform="rotate(-100,150,150)"/>
-        <line x1="150" y1="20" x2="170" y2="2" transform="rotate(130,150,150)"/>
-        <line x1="150" y1="20" x2="170" y2="2" transform="rotate(-130,150,150)"/>
-      </g>
-      <!-- Outer decorative ring -->
-      <circle cx="150" cy="140" r="105" stroke="#00e64d" stroke-width="1.5" opacity="0.3" stroke-dasharray="8 4"/>
-      <circle cx="150" cy="140" r="92" stroke="#00e64d" stroke-width="3" opacity="0.6"/>
-      <!-- Inner fill for circle -->
-      <circle cx="150" cy="140" r="90" fill="#0a0a0a"/>
-      <!-- FETICO text arc -->
-      <path id="arcTop" d="M 60,140 A 90,90 0 0,1 240,140" fill="none"/>
-      <text font-family="'Black Ops One', cursive" font-size="20" fill="#ffffff" letter-spacing="8">
-        <textPath href="#arcTop" startOffset="10%">FETICO</textPath>
-      </text>
-      <!-- Skull cranium -->
-      <ellipse cx="150" cy="118" rx="52" ry="46" fill="#00e64d" opacity="0.95"/>
-      <!-- Skull jaw -->
-      <rect x="112" y="152" width="76" height="35" rx="8" fill="#00e64d" opacity="0.95"/>
-      <!-- Skull eye sockets -->
-      <ellipse cx="133" cy="116" rx="14" ry="15" fill="#0a0a0a"/>
-      <ellipse cx="167" cy="116" rx="14" ry="15" fill="#0a0a0a"/>
-      <!-- Inner eye glow -->
-      <ellipse cx="133" cy="116" rx="8" ry="9" fill="#00e64d" opacity="0.2"/>
-      <ellipse cx="167" cy="116" rx="8" ry="9" fill="#00e64d" opacity="0.2"/>
-      <!-- Nose -->
-      <path d="M145 138 L150 148 L155 138 Z" fill="#0a0a0a" opacity="0.8"/>
-      <!-- Teeth -->
-      <rect x="118" y="164" width="11" height="14" rx="2" fill="#0a0a0a"/>
-      <rect x="133" y="164" width="11" height="16" rx="2" fill="#0a0a0a"/>
-      <rect x="148" y="164" width="11" height="16" rx="2" fill="#0a0a0a"/>
-      <rect x="163" y="164" width="11" height="14" rx="2" fill="#0a0a0a"/>
-      <!-- Crossed arrows/lightning below -->
-      <path d="M100 200 L200 230" stroke="#00e64d" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
-      <path d="M200 200 L100 230" stroke="#00e64d" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
-      <!-- BCN1 banner -->
-      <rect x="90" y="235" width="120" height="36" rx="0" fill="#00e64d"/>
-      <text x="150" y="260" text-anchor="middle" font-family="'Black Ops One', cursive" font-size="22" fill="#050505" letter-spacing="4">BCN1</text>
-      <!-- Bottom arrow -->
-      <path d="M140 275 L150 290 L160 275 Z" fill="#00e64d" opacity="0.6"/>
-    </svg>
+    <img src="assets/logo-calavera.png" alt="FETICO BCN1" class="skull-svg" style="filter: invert(1) sepia(1) saturate(6) hue-rotate(88deg) brightness(1.05); width:220px; height:220px; object-fit:contain;">
   </div>
 
   <p class="hero-eyebrow">Amazon El Prat de Llobregat · Elecciones Comité de Empresa</p>
@@ -1311,28 +1251,8 @@
       <!-- Pili -->
       <div class="member-card">
         <div class="member-photo">
+          <img src="assets/fotos/pili-garcia.png" alt="Pili García" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
           <div class="member-photo-overlay"></div>
-          <!-- Styled placeholder that matches the purple-shirt style from photo -->
-          <svg width="100%" height="100%" viewBox="0 0 180 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="180" height="240" fill="#1a1a1a"/>
-            <!-- shirt -->
-            <ellipse cx="90" cy="200" rx="70" ry="50" fill="#4a1a8a"/>
-            <!-- head -->
-            <ellipse cx="90" cy="95" rx="35" ry="38" fill="#c8956c"/>
-            <!-- hair -->
-            <ellipse cx="90" cy="72" rx="38" ry="18" fill="#d4a855"/>
-            <rect x="52" y="72" width="14" height="40" rx="7" fill="#d4a855"/>
-            <rect x="114" y="72" width="14" height="40" rx="7" fill="#d4a855"/>
-            <!-- eyes -->
-            <ellipse cx="78" cy="95" rx="5" ry="5" fill="#fff"/>
-            <ellipse cx="78" cy="95" rx="3" ry="3" fill="#4a3020"/>
-            <ellipse cx="102" cy="95" rx="5" ry="5" fill="#fff"/>
-            <ellipse cx="102" cy="95" rx="3" ry="3" fill="#4a3020"/>
-            <!-- smile -->
-            <path d="M78 110 Q90 120 102 110" stroke="#7a4030" stroke-width="2" fill="none" stroke-linecap="round"/>
-            <!-- union badge -->
-            <circle cx="90" cy="175" r="12" fill="#fff" opacity="0.3"/>
-          </svg>
         </div>
         <div class="member-info">
           <div class="member-name">Pili García</div>
@@ -1741,18 +1661,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">
-    <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="50" cy="50" r="48" stroke="#00e64d" stroke-width="2" opacity="0.4"/>
-      <circle cx="50" cy="50" r="36" fill="#111"/>
-      <ellipse cx="50" cy="43" rx="17" ry="15" fill="#00e64d" opacity="0.9"/>
-      <ellipse cx="50" cy="52" rx="12" ry="9" fill="#00e64d" opacity="0.9"/>
-      <ellipse cx="43" cy="42" rx="5" ry="5.5" fill="#050505"/>
-      <ellipse cx="57" cy="42" rx="5" ry="5.5" fill="#050505"/>
-      <rect x="40" y="57" width="4" height="6" rx="1" fill="#050505"/>
-      <rect x="46" y="57" width="4" height="7" rx="1" fill="#050505"/>
-      <rect x="52" y="57" width="4" height="6" rx="1" fill="#050505"/>
-      <text x="50" y="80" text-anchor="middle" font-family="'Black Ops One', cursive" font-size="9" fill="#00e64d" letter-spacing="1">BCN1</text>
-    </svg>
+    <img src="assets/logo-calavera.png" alt="FETICO BCN1" width="50" height="50" style="object-fit:contain; filter: invert(1) sepia(1) saturate(6) hue-rotate(88deg) brightness(1.05);">
     <div class="footer-brand">FETICO BCN1</div>
   </div>
   <div class="footer-sub">Amazon · El Prat de Llobregat · Sindicato Independiente</div>
